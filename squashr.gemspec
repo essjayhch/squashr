@@ -13,18 +13,18 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'squashr'
-  s.version           = '0.0.1'
-  s.date              = '2010-05-11'
+  s.version           = '0.0.2'
+  s.date              = '2021-03-18'
 
   ## Make sure your summary is short. The description may be as long
   ## as you like.
-  s.summary     = "Short description used in Gem listings."
+  s.summary     = "Ruby interface to create sqhashfs images from directories"
   s.description = "Long description. Maybe copied from the README."
 
   ## List the primary authors. If there are a bunch of authors, it's probably
   ## better to set the email to an email list or something. If you don't have
   ## a custom homepage, consider using your GitHub URL or the like.
-  s.authors  = ["John Doe"]
+  s.authors  = ["essjayhch", "David Dollar"]
   s.email    = 'jdoe@example.com'
   s.homepage = 'http://example.com/NAME'
 
@@ -47,7 +47,7 @@ Gem::Specification.new do |s|
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
-  #s.add_dependency('DEPNAME', [">= 1.1.0", "< 2.0.0"])
+  s.add_dependency('open3','> 0')
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
@@ -105,5 +105,5 @@ Gem::Specification.new do |s|
 
   ## Test files will be grabbed from the file list. Make sure the path glob
   ## matches what you actually use.
-  s.test_files = s.files.select { |path| path =~ /^test\/test_.*\.rb/ }
+  s.test_files = s.files.select{ |path| path =~ /^test\/test_.*\.rb/ }
 end

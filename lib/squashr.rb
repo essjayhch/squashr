@@ -15,6 +15,8 @@ module Squashr
 
   attr_accessor :logger
 
+  module_function
+
   def log(message: message, level: Logger::INFO)
     return unless logger
     logger.send(level, message, "#{$PROGRAM_NAME}/squashfs")
